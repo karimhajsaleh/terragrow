@@ -1,6 +1,14 @@
 <mat-card>
+  <mat-card-header>
+    <!-- Titre de la carte -->
     <mat-card-title>Bandes de la Parcelle</mat-card-title>
+    <!-- Bouton de retour aligné à droite -->
+    <mat-card-actions class="button-container">
+      <button mat-raised-button color="primary" (click)="goBackToParcelleList()">Retour aux Parcelles</button>
+    </mat-card-actions>
+  </mat-card-header>
     <mat-card-content>
+      <!-- Tableau Material pour afficher les bandes -->
       <table mat-table [dataSource]="bandes">
         <ng-container matColumnDef="numero">
           <th mat-header-cell *matHeaderCellDef>Numéro</th>

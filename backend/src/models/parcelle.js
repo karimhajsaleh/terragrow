@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
+// Définition du modèle Parcelle avec Sequelize
 const Parcelle = sequelize.define('Parcelle', {
   id: {
     type: DataTypes.INTEGER,

@@ -12,6 +12,7 @@ app.use('/parcelles', parcelleRoutes);
 
 const PORT = process.env.PORT || 3000;
 
+// Synchronisation de la base de données et démarrage du serveur
 sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Serveur démarré sur le port ${PORT}`));
 });

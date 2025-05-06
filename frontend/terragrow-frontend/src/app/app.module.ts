@@ -15,6 +15,7 @@ import { ParcelleFormComponent } from './components/parcelle-form/parcelle-form.
 import { ParcelleListComponent } from './components/parcelle-list/parcelle-list.component';
 import { BandeListComponent } from './components/bande-list/bande-list.component';
 
+// Définition des routes de l'application
 const routes: Routes = [
   { path: '', component: ParcelleListComponent },
   { path: 'parcelles/:id/bandes', component: BandeListComponent },

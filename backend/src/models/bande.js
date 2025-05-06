@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 const Parcelle = require('./parcelle');
 
+// Définition du modèle Bande avec Sequelize
 const Bande = sequelize.define('Bande', {
   id: {
     type: DataTypes.INTEGER,
@@ -29,6 +30,7 @@ const Bande = sequelize.define('Bande', {
   },
 });
 
+// Définition des relations entre Parcelle et Bande
 Parcelle.hasMany(Bande, { foreignKey: 'parcelleId' });
 Bande.belongsTo(Parcelle, { foreignKey: 'parcelleId' });
 
