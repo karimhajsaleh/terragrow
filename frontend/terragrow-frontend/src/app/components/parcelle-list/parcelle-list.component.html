@@ -1,0 +1,28 @@
+<app-parcelle-form></app-parcelle-form>
+<mat-card style="margin-top: 20px;">
+  <mat-card-title>Parcelles</mat-card-title>
+  <mat-card-content>
+    <table mat-table [dataSource]="parcelles">
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef>Nom</th>
+        <td mat-cell *matCellDef="let parcelle">{{ parcelle.nom }}</td>
+      </ng-container>
+      <ng-container matColumnDef="longueur">
+        <th mat-header-cell *matHeaderCellDef>Longueur (m)</th>
+        <td mat-cell *matCellDef="let parcelle">{{ parcelle.longueur }}</td>
+      </ng-container>
+      <ng-container matColumnDef="largeur">
+        <th mat-header-cell *matHeaderCellDef>Largeur (m)</th>
+        <td mat-cell *matCellDef="let parcelle">{{ parcelle.largeur }}</td>
+      </ng-container>
+      <ng-container matColumnDef="bandeCount">
+        <th mat-header-cell *matHeaderCellDef>Bandes</th>
+        <td mat-cell *matCellDef="let parcelle">
+          <button mat-button (click)="viewBandes(parcelle.id)">{{ parcelle.bandeCount }} Bandes</button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>

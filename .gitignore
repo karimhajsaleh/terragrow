@@ -1,0 +1,37 @@
+# Node.js (Backend)
+node_modules/
+npm-debug.log
+.env
+.env.local
+.env.development
+.env.production
+
+# Angular (Frontend)
+dist/
+.angular/
+*.log
+coverage/
+e2e/*.js
+e2e/*.map
+
+# Fichiers générés
+*.bak
+*.swp
+*~
+
+# Fichiers d'IDE et éditeurs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Autres
+*.cache
+*.pid
+*.seed
+*.pid.lock
+```

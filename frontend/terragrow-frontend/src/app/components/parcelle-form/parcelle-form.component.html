@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Créer une Parcelle</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <mat-label>Nom</mat-label>
+          <input matInput [(ngModel)]="parcelle.nom" name="nom" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Longueur (m)</mat-label>
+          <input matInput type="number" [(ngModel)]="parcelle.longueur" name="longueur" required min="0">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Largeur (m)</mat-label>
+          <input matInput type="number" [(ngModel)]="parcelle.largeur" name="largeur" required min="0">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Créer</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
